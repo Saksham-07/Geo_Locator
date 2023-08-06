@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Your result page design to show the user's guess and the distance -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#51CBE1E1">
+
+    <TextView
+        android:id="@+id/showingResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Showing Results..."
+        android:textSize="40sp"
+        android:textColor="#494744"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_below="@id/showingResult"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp" />
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/mapContainer"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:layout_below="@id/showingResult"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginTop="30dp" />-->
+
+
+    <TextView
+        android:id="@+id/userGuessTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mapView"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="110dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userGuessTextView"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:text="" />
+
+    <LinearLayout
+        android:id="@id/nextLocationButton"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/distanceTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_back">
+
+        <TextView
+            android:id="@+id/nextLocationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Next Guess" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/nextLocationButton"
+        android:background="@drawable/button_back">
+
+    <TextView
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+</RelativeLayout>
